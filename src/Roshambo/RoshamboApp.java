@@ -59,7 +59,7 @@ public class RoshamboApp {
 	}while(con.equalsIgnoreCase("y"));
 	
 	//the counters will keep track of player wins, computer wins and ties and print that out at the end.
-	System.out.println("You won " + playerWin + " times. The computer won " + compWin + " times. There were " + tie + " ties.");
+	System.out.println("You won " + playerWin + " time(s). The computer won " + compWin + " time(s). There were " + tie + " tie(s).");
 
 	}
 
