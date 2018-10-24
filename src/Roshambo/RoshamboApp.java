@@ -55,11 +55,11 @@ public class RoshamboApp {
 			System.out.println("Computer Wins!");
 			compWin++;
 		}
-	con = Validator.getString(scan, "Would you like to continue? y/n");
+	con = Validator.getString(scan, "Would you like to play again? y/n");
 	}while(con.equalsIgnoreCase("y"));
 	
 	//the counters will keep track of player wins, computer wins and ties and print that out at the end.
-	System.out.println("You won " + playerWin + " times. Computer won " + compWin + " times. Number of ties: " + tie);
+	System.out.println("You won " + playerWin + " times. The computer won " + compWin + " times. There were " + tie + " ties.");
 
 	}
 
