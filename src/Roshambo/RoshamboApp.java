@@ -1,6 +1,11 @@
 package Roshambo;
 import java.util.Scanner;
 
+/**
+ * @author ${Christie Desnoyer}
+ *
+ */
+
 public class RoshamboApp {
 
 	public static void main(String[] args) {
@@ -28,7 +33,8 @@ public class RoshamboApp {
 		//in this case if they choose d, they get the computer opponent that ALWAYS throws rock
 		//if they choose c, the get the computer player that throws random Rock Paper Scissor moves
 		Player opp2 = OpponentCreator.getPlayer(opponent, userChoice);
-		do {	
+		do {
+			
 		userValue = user.generateRoshambo();
 		
 		System.out.println(userName +": " + userValue);
@@ -37,6 +43,8 @@ public class RoshamboApp {
 		
 		System.out.println("Computer: "+ opponentValue);
 		
+		
+		//Extract this method into a new class and call it. 
 		//first compares for a tie
 		if (userValue == opponentValue) {
 			System.out.println("It's a tie!");
@@ -55,11 +63,12 @@ public class RoshamboApp {
 			System.out.println("Computer Wins!");
 			compWin++;
 		}
+		
 	con = Validator.getString(scan, "Would you like to play again? y/n");
 	}while(con.equalsIgnoreCase("y"));
 	
 	//the counters will keep track of player wins, computer wins and ties and print that out at the end.
-	System.out.println("You won " + playerWin + " time(s). The computer won " + compWin + " time(s). There were " + tie + " tie(s).");
+	System.out.println("You won " + playerWin + " times. The computer won " + compWin + " times. There were " + tie + " ties.");
 
 	}
 
